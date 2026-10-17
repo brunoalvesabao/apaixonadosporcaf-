@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manhã com Afeto – Cestas de Café da Manhã Artesanais</title>
-    <meta name="description" content="Surpreenda quem você ama com cestas de café da manhã personalizadas, pães artesanais, frutas frescas e entrega com hora marcada.">
+    <title>Atelier Manhã com Afeto – Cestas de Café da Manhã Artesanais & Presentes</title>
+    <meta name="description" content="Cestas de café da manhã artesanais em caixas de madeira Pinus personalizadas, fotos Polaroid, flores naturais e pães de fermentação natural. Entrega agendada em Niterói e RJ.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -22,608 +22,984 @@
             theme: {
                 extend: {
                     colors: {
-                        cream: '#FAF6F0',
-                        sand: '#F2EAE0',
-                        coffee: {
-                            light: '#A67B5B',
-                            DEFAULT: '#6F4E37',
-                            dark: '#3E2723',
+                        cream: '#FDFBF7',
+                        sand: '#F4EFE6',
+                        taupe: '#E6DEC8',
+                        espresso: {
+                            light: '#7C5841',
+                            DEFAULT: '#4A3327',
+                            dark: '#2A1B12',
                         },
-                        terracotta: '#C86D51',
-                        whatsapp: '#25D366',
-                        whatsappDark: '#1DA851'
+                        terracotta: {
+                            light: '#D98266',
+                            DEFAULT: '#B85D43',
+                            dark: '#96452E',
+                        },
+                        sage: '#4A5D4E',
+                        whatsapp: '#22C55E',
+                        whatsappDark: '#16A34A'
                     },
                     fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(42, 27, 18, 0.07)',
+                        'card': '0 10px 30px -10px rgba(42, 27, 18, 0.06)',
                     }
                 }
             }
         }
     </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FDFBF7; }
+        ::-webkit-scrollbar-thumb { background: #D5C7B8; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #B85D43; }
+        
+        .hero-pattern {
+            background-image: radial-gradient(#E6DEC8 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
 </head>
-<body class="bg-cream text-coffee-dark font-sans antialiased selection:bg-terracotta selection:text-white">
+<body class="bg-cream text-espresso-dark font-sans antialiased selection:bg-terracotta selection:text-white">
 
     <!-- BARRA DE AVISO NO TOPO -->
-    <div class="bg-coffee-dark text-cream text-xs md:text-sm py-2.5 px-4 text-center font-medium tracking-wide">
-        🥐 Entregas todos os dias das 06h30 às 19h • Consulte disponibilidade para entrega hoje!
+    <div class="bg-espresso-dark text-cream text-xs md:text-sm py-2.5 px-4 text-center font-medium tracking-wide border-b border-white/10">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
+            <span class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-whatsapp animate-pulse"></span>
+                <strong>Entregas Hoje:</strong> Todos os dias das 06h30 às 20h (Niterói e Rio de Janeiro)
+            </span>
+            <span class="hidden sm:inline text-white/30">|</span>
+            <span class="hidden sm:flex items-center gap-1 text-amber-300">
+                ★ 4.9/5 (+240 clientes encantados no Google)
+            </span>
+        </div>
     </div>
 
-    <!-- HEADER SIMPLES -->
-    <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-sand">
+    <!-- HEADER GLASSMORPHISM -->
+    <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-taupe/60 transition-all">
         <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="#" class="font-serif text-2xl font-bold text-coffee-dark tracking-tight flex items-center gap-2">
-                <i data-lucide="coffee" class="w-6 h-6 text-terracotta"></i>
-                Manhã com Afeto
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-espresso-dark text-cream flex items-center justify-center shadow-sm group-hover:bg-terracotta transition">
+                    <i data-lucide="croissant" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-2xl md:text-3xl font-bold text-espresso-dark tracking-tight block leading-none">
+                        Manhã com Afeto
+                    </span>
+                    <span class="text-[10px] uppercase tracking-widest text-terracotta font-semibold block mt-0.5">
+                        Cestas Artesanais & Presentes
+                    </span>
+                </div>
             </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-coffee-dark/80">
-                <a href="#catalogo" class="hover:text-terracotta transition">Nosso Catálogo</a>
-                <a href="#entrega" class="hover:text-terracotta transition">Entregas</a>
-                <a href="#como-funciona" class="hover:text-terracotta transition">Como Funciona</a>
+
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-espresso/80">
+                <a href="#catalogo" class="hover:text-terracotta transition">Catálogo de Cestas</a>
+                <a href="#personalizacao" class="hover:text-terracotta transition">Personalização</a>
+                <a href="#entrega" class="hover:text-terracotta transition">Regiões & Entrega</a>
+                <a href="#depoimentos" class="hover:text-terracotta transition">Avaliações</a>
                 <a href="#faq" class="hover:text-terracotta transition">Dúvidas</a>
             </nav>
-            <button onclick="abrirWhatsApp('Olá! Gostaria de ver o catálogo completo de Cestas de Café da Manhã e consultar a disponibilidade de entrega.')" 
-                class="bg-whatsapp hover:bg-whatsappDark text-white text-xs md:text-sm font-semibold px-4 py-2.5 rounded-full flex items-center gap-2 shadow-sm transition transform hover:scale-105">
-                <i data-lucide="message-circle" class="w-4 h-4"></i>
-                <span>Pedir pelo WhatsApp</span>
-            </button>
-        </div>
-    </header>
 
-    <!-- 1. HERO SECTION (Espelhada na estrutura Jutegalli) -->
-    <section class="relative py-12 md:py-20 px-4 overflow-hidden">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-            
-            <!-- Coluna de Texto -->
-            <div class="space-y-6">
-                <span class="inline-block bg-sand text-coffee font-semibold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full">
-                    Procura um presente inesquecível?
-                </span>
-                
-                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-coffee-dark leading-tight">
-                    Transforme o despertar de quem você ama em uma <span class="text-terracotta italic">experiência de carinho.</span>
-                </h1>
-                
-                <p class="text-base md:text-lg text-coffee-dark/80 leading-relaxed">
-                    Cestas de café da manhã artesanais com pães fresquinhos, frutas selecionadas, flores naturais, balões e mimos personalizados. 
-                    <strong class="text-coffee-dark">Não sabe o que escolher? Nós ajudamos pelo WhatsApp e entregamos hoje!</strong>
-                </p>
-
-                <!-- Lista de Diferenciais e Quebra de Objeções -->
-                <ul class="space-y-2.5 text-sm md:text-base text-coffee-dark/90 pt-2">
-                    <li class="flex items-start gap-2.5">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-terracotta shrink-0 mt-0.5"></i>
-                        <span>Personalize com <strong>nome na caneca, fotos, balões e cartão</strong> com sua mensagem especial.</span>
-                    </li>
-                    <li class="flex items-start gap-2.5">
-                        <i data-lucide="truck" class="w-5 h-5 text-terracotta shrink-0 mt-0.5"></i>
-                        <span>Entrega rápida e segura com hora marcada por <strong>motorista parceiro exclusivo</strong>.</span>
-                    </li>
-                    <li class="flex items-start gap-2.5">
-                        <i data-lucide="credit-card" class="w-5 h-5 text-terracotta shrink-0 mt-0.5"></i>
-                        <span>Modelos exclusivos de <strong>R$ 169 a R$ 489</strong>. Pagamento fácil via Pix ou Cartão.</span>
-                    </li>
-                    <li class="flex items-start gap-2.5">
-                        <i data-lucide="building-2" class="w-5 h-5 text-terracotta shrink-0 mt-0.5"></i>
-                        <span><strong>Pedidos Corporativos:</strong> emitimos Nota Fiscal e incluímos a logomarca da sua empresa.</span>
-                    </li>
-                </ul>
-
-                <!-- CTA Principal -->
-                <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                    <a href="#catalogo" class="bg-terracotta hover:bg-coffee text-white text-center font-bold px-8 py-4 rounded-xl shadow-lg shadow-terracotta/25 transition flex items-center justify-center gap-2 text-base">
-                        <span>QUERO ESCOLHER MEU PRESENTE</span>
-                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                    </a>
-                </div>
-                <p class="text-xs text-coffee-dark/60 flex items-center gap-1.5">
-                    <i data-lucide="zap" class="w-4 h-4 text-whatsapp"></i>
-                    Atendimento rápido, humanizado e personalizado via WhatsApp
-                </p>
-            </div>
-
-            <!-- Coluna de Imagem -->
-            <div class="relative">
-                <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-sand relative">
-                    <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=1000&q=80" 
-                         alt="Cesta de Café da Manhã Completa com Croissants, Frutas e Café" 
-                         class="w-full h-full object-cover">
-                    <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-lg flex items-center gap-4">
-                        <div class="bg-terracotta/10 text-terracotta p-3 rounded-xl">
-                            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-bold uppercase tracking-wider text-terracotta">Feito no dia da entrega</p>
-                            <p class="text-sm font-semibold text-coffee-dark">Padaria artesanal & frutas frescas selecionadas</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 2. INFORMAÇÕES DE ENTREGA -->
-    <section id="entrega" class="py-12 bg-sand/70 border-y border-sand px-4">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-8">
-                <h2 class="font-serif text-2xl md:text-3xl font-bold text-coffee-dark">Informações de Entrega</h2>
-                <p class="text-sm text-coffee-dark/70 mt-1">Pontualidade e cuidado para a sua surpresa chegar impecável</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-cream p-6 rounded-2xl border border-coffee/10 shadow-sm">
-                    <div class="w-10 h-10 rounded-xl bg-terracotta/15 text-terracotta flex items-center justify-center mb-4">
-                        <i data-lucide="clock" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Horários & Entrega Hoje</h3>
-                    <p class="text-sm text-coffee-dark/80 leading-relaxed">
-                        As entregas são realizadas das <strong>06h30 às 19h</strong>, conforme disponibilidade da rota. Para pedidos no mesmo dia, consulte disponibilidade no WhatsApp.
-                    </p>
-                </div>
-
-                <div class="bg-cream p-6 rounded-2xl border border-coffee/10 shadow-sm">
-                    <div class="w-10 h-10 rounded-xl bg-terracotta/15 text-terracotta flex items-center justify-center mb-4">
-                        <i data-lucide="map-pin" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Taxa de Frete Transparente</h3>
-                    <p class="text-sm text-coffee-dark/80 leading-relaxed">
-                        Trabalhamos com taxa de frete tabelada e acessível para os principais bairros da região. Consulte o valor exato informando o CEP pelo nosso atendimento.
-                    </p>
-                </div>
-
-                <div class="bg-cream p-6 rounded-2xl border border-coffee/10 shadow-sm">
-                    <div class="w-10 h-10 rounded-xl bg-terracotta/15 text-terracotta flex items-center justify-center mb-4">
-                        <i data-lucide="shield-check" class="w-5 h-5"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-2">Cuidado no Transporte</h3>
-                    <p class="text-sm text-coffee-dark/80 leading-relaxed">
-                        Nossas cestas, flores e balões são transportados exclusivamente por <strong>motoristas parceiros de carro</strong>, garantindo que tudo chegue intacto.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. VITRINE DE PRODUTOS (6 Modelos Estratégicos) -->
-    <section id="catalogo" class="py-16 md:py-24 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-                <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Alguns dos nossos modelos</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-coffee-dark">
-                    Modelos para todos os momentos, a partir de R$ 169
-                </h2>
-                <p class="text-sm md:text-base text-coffee-dark/75">
-                    Escolha a sua favorita abaixo ou chame no WhatsApp para montar uma cesta 100% personalizada.
-                </p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Produto 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition border border-sand flex flex-col">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Box Bom Dia Carinho" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-coffee-dark text-xs font-bold px-3 py-1 rounded-full">
-                            Mimo Acessível
-                        </span>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-                        <div>
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h3 class="font-serif text-xl font-bold text-coffee-dark">Box Despertar Doce</h3>
-                                <span class="text-lg font-extrabold text-terracotta">R$ 169,00</span>
-                            </div>
-                            <p class="text-sm text-coffee-dark/75 leading-relaxed">
-                                Um mimo simbólico, mas repleto de presença. Acompanha caneca personalizada, drip coffee especial, croissant amanteigado, waffle artesanal, geleia, manteiga, suco integral e cartão com sua mensagem.
-                            </p>
-                        </div>
-                        <div class="pt-2">
-                            <button onclick="pedirProduto('Box Despertar Doce', 'R$ 169,00')" class="w-full bg-coffee-dark hover:bg-terracotta text-white font-semibold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm">
-                                <i data-lucide="sparkles" class="w-4 h-4"></i>
-                                <span>Quero personalizar agora</span>
-                            </button>
-                            <p class="text-[11px] text-center text-coffee-dark/60 mt-2">
-                                ⚡ Consultar disponibilidade de entrega rápida
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Produto 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition border-2 border-terracotta flex flex-col relative">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Cesta Clássica Manhã de Sol" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 bg-terracotta text-white text-xs font-bold px-3 py-1 rounded-full shadow">
-                            ⭐ Mais Vendida
-                        </span>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-                        <div>
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h3 class="font-serif text-xl font-bold text-coffee-dark">Cesta Manhã de Sol</h3>
-                                <span class="text-lg font-extrabold text-terracotta">R$ 259,00</span>
-                            </div>
-                            <p class="text-sm text-coffee-dark/75 leading-relaxed">
-                                Equilíbrio perfeito entre sabor e afeto. Cesta em vime ou cartonagem rígida com croissant recheado, pão de queijo artesanal, bolo caseiro, mix de uvas e morangos, iogurte, suco de laranja, drip coffee e arranjo de flores secas.
-                            </p>
-                        </div>
-                        <div class="pt-2">
-                            <button onclick="pedirProduto('Cesta Manhã de Sol', 'R$ 259,00')" class="w-full bg-terracotta hover:bg-coffee text-white font-semibold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-md">
-                                <i data-lucide="sparkles" class="w-4 h-4"></i>
-                                <span>Quero personalizar agora</span>
-                            </button>
-                            <p class="text-[11px] text-center text-coffee-dark/60 mt-2">
-                                ⚡ Consultar disponibilidade de entrega rápida
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Produto 3 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition border border-sand flex flex-col">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1513442542250-854d436a73f2?auto=format&fit=crop&w=800&q=80" alt="Box Encanto com Balão" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-coffee-dark text-xs font-bold px-3 py-1 rounded-full">
-                            Com Balão Personalizado
-                        </span>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-                        <div>
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h3 class="font-serif text-xl font-bold text-coffee-dark">Box Surpresa & Balão</h3>
-                                <span class="text-lg font-extrabold text-terracotta">R$ 298,00</span>
-                            </div>
-                            <p class="text-sm text-coffee-dark/75 leading-relaxed">
-                                Feita para arrancar suspiros no primeiro olhar! Acompanha balão Bubble personalizado com frase e cores à sua escolha, café da manhã completo (salgados, doces finos, frutas, frios) e foto Polaroid de recordação.
-                            </p>
-                        </div>
-                        <div class="pt-2">
-                            <button onclick="pedirProduto('Box Surpresa & Balão', 'R$ 298,00')" class="w-full bg-coffee-dark hover:bg-terracotta text-white font-semibold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm">
-                                <i data-lucide="sparkles" class="w-4 h-4"></i>
-                                <span>Quero personalizar agora</span>
-                            </button>
-                            <p class="text-[11px] text-center text-coffee-dark/60 mt-2">
-                                ⚡ Consultar disponibilidade de entrega rápida
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Produto 4 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition border border-sand flex flex-col">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=800&q=80" alt="Cesta Romântica Para Dois" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-coffee-dark text-xs font-bold px-3 py-1 rounded-full">
-                            Serve 2 Pessoas
-                        </span>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-                        <div>
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h3 class="font-serif text-xl font-bold text-coffee-dark">Brunch a Dois</h3>
-                                <span class="text-lg font-extrabold text-terracotta">R$ 369,00</span>
-                            </div>
-                            <p class="text-sm text-coffee-dark/75 leading-relaxed">
-                                Ideal para aniversários de casamento, namoro ou datas especiais. Todos os itens em dobro: 2 sucos, 2 croissants, seleção de queijos e frios, baguete de fermentação natural, morangos com chocolate e par de xícaras.
-                            </p>
-                        </div>
-                        <div class="pt-2">
-                            <button onclick="pedirProduto('Brunch a Dois', 'R$ 369,00')" class="w-full bg-coffee-dark hover:bg-terracotta text-white font-semibold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm">
-                                <i data-lucide="sparkles" class="w-4 h-4"></i>
-                                <span>Quero personalizar agora</span>
-                            </button>
-                            <p class="text-[11px] text-center text-coffee-dark/60 mt-2">
-                                ⚡ Consultar disponibilidade de entrega rápida
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Produto 5 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition border border-sand flex flex-col">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=800&q=80" alt="Cesta Leve & Saudável Fit" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-coffee-dark text-xs font-bold px-3 py-1 rounded-full">
-                            Linha Saudável / Fit
-                        </span>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-                        <div>
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h3 class="font-serif text-xl font-bold text-coffee-dark">Cesta Leve & Natural</h3>
-                                <span class="text-lg font-extrabold text-terracotta">R$ 285,00</span>
-                            </div>
-                            <p class="text-sm text-coffee-dark/75 leading-relaxed">
-                                Pensada para quem ama saúde sem abrir mão do sabor. Pão multigrãos de fermentação natural, pasta de castanhas, iogurte grego sem açúcar, granola artesanal, salada de frutas frescas, água de coco, chás orgânicos e infusor.
-                            </p>
-                        </div>
-                        <div class="pt-2">
-                            <button onclick="pedirProduto('Cesta Leve & Natural', 'R$ 285,00')" class="w-full bg-coffee-dark hover:bg-terracotta text-white font-semibold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm">
-                                <i data-lucide="sparkles" class="w-4 h-4"></i>
-                                <span>Quero personalizar agora</span>
-                            </button>
-                            <p class="text-[11px] text-center text-coffee-dark/60 mt-2">
-                                ⚡ Consultar disponibilidade de entrega rápida
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Produto 6 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition border border-sand flex flex-col">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" alt="Bandeja Imperial com Orquídea" class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                        <span class="absolute top-3 left-3 bg-coffee-dark text-cream text-xs font-bold px-3 py-1 rounded-full">
-                            Experiência Luxo
-                        </span>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-                        <div>
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h3 class="font-serif text-xl font-bold text-coffee-dark">Bandeja Imperial & Orquídea</h3>
-                                <span class="text-lg font-extrabold text-terracotta">R$ 489,00</span>
-                            </div>
-                            <p class="text-sm text-coffee-dark/75 leading-relaxed">
-                                Sofisticação máxima em bandeja de madeira reutilizável. Acompanha uma linda Orquídea Phalaenopsis plantada, queijos nobres (Brie com mel e nozes), croissant de amêndoas, espumante baby ou suco uva reserva, frutas vermelhas e caneca exclusiva.
-                            </p>
-                        </div>
-                        <div class="pt-2">
-                            <button onclick="pedirProduto('Bandeja Imperial & Orquídea', 'R$ 489,00')" class="w-full bg-coffee-dark hover:bg-terracotta text-white font-semibold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm">
-                                <i data-lucide="sparkles" class="w-4 h-4"></i>
-                                <span>Quero personalizar agora</span>
-                            </button>
-                            <p class="text-[11px] text-center text-coffee-dark/60 mt-2">
-                                ⚡ Consultar disponibilidade de entrega rápida
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Botão Secundário de Catálogo Completo -->
-            <div class="mt-12 text-center">
-                <button onclick="abrirWhatsApp('Olá! Vi os modelos no site e gostaria de saber se vocês têm outras opções disponíveis no catálogo do WhatsApp.')"
-                    class="inline-flex items-center gap-2 bg-sand hover:bg-coffee/10 text-coffee-dark font-semibold px-6 py-3.5 rounded-xl transition text-sm">
-                    <i data-lucide="book-open" class="w-4 h-4 text-terracotta"></i>
-                    <span>Outros modelos e adicionais disponíveis no WhatsApp • Clique para ver</span>
+            <div class="flex items-center gap-3">
+                <button onclick="abrirModalPersonalizar()" class="hidden sm:inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-espresso-dark bg-sand hover:bg-taupe px-4 py-2.5 rounded-full transition">
+                    <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-terracotta"></i>
+                    <span>Montar Cesta</span>
+                </button>
+                <button onclick="abrirWhatsApp('Olá! Vim pelo site e gostaria de ajuda para escolher uma Cesta de Café da Manhã e consultar a disponibilidade de entrega.')" 
+                    class="bg-whatsapp hover:bg-whatsappDark text-white text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 rounded-full flex items-center gap-2 shadow-md shadow-whatsapp/20 transition transform hover:-translate-y-0.5">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Atendimento Rápido</span>
                 </button>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- 4. PROVA SOCIAL (Reações de Clientes) -->
-    <section class="py-16 bg-coffee-dark text-cream px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Amor em cada detalhe</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">
-                    Reações de quem já se encantou com nossas cestas
-                </h2>
-                <p class="text-sm text-cream/70 mt-2">
-                    Feedbacks espontâneos de clientes que presentearam com carinho.
+    <!-- 1. HERO SECTION -->
+    <section class="relative py-10 md:py-16 lg:py-20 px-4 overflow-hidden hero-pattern">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            
+            <!-- Coluna de Texto (7 colunas) -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-sand border border-taupe text-espresso font-semibold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-terracotta"></i>
+                    <span>Procura um presente inesquecível para surpreender hoje?</span>
+                </div>
+                
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-espresso-dark leading-[1.12]">
+                    Transforme o despertar de quem você ama em uma <span class="text-terracotta italic font-normal">memória afetiva única.</span>
+                </h1>
+                
+                <p class="text-base md:text-lg text-espresso/85 leading-relaxed max-w-2xl">
+                    Cestas e bandejas em madeira Pinus com pães de fermentação natural assados no dia, queijos nobres, frutas frescas, flores naturais, balões personalizados e fotos Polaroid. 
+                    <strong class="text-espresso-dark underline decoration-terracotta/50 decoration-2 underline-offset-4">Não sabe o que escolher? Nós ajudamos pelo WhatsApp e entregamos hoje!</strong>
                 </p>
+
+                <!-- Lista de Quebra de Objeções -->
+                <div class="bg-white/80 backdrop-blur-sm border border-taupe/70 rounded-2xl p-5 shadow-soft space-y-3">
+                    <div class="flex items-start gap-3">
+                        <div class="w-6 h-6 rounded-full bg-terracotta/15 text-terracotta flex items-center justify-center shrink-0 mt-0.5">
+                            <i data-lucide="heart" class="w-3.5 h-3.5"></i>
+                        </div>
+                        <p class="text-sm md:text-base text-espresso-dark/90">
+                            <strong>Personalização Completa:</strong> Gravamos o nome na caixa de madeira ou balão, incluímos <strong>2 fotos Polaroid</strong> e cartão impresso com a sua mensagem.
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-6 h-6 rounded-full bg-terracotta/15 text-terracotta flex items-center justify-center shrink-0 mt-0.5">
+                            <i data-lucide="car" class="w-3.5 h-3.5"></i>
+                        </div>
+                        <p class="text-sm md:text-base text-espresso-dark/90">
+                            <strong>Logística Impecável:</strong> Entrega rápida e segura com hora marcada por <strong>motorista parceiro exclusivo (de carro)</strong> em Niterói e RJ.
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-6 h-6 rounded-full bg-terracotta/15 text-terracotta flex items-center justify-center shrink-0 mt-0.5">
+                            <i data-lucide="credit-card" class="w-3.5 h-3.5"></i>
+                        </div>
+                        <p class="text-sm md:text-base text-espresso-dark/90">
+                            <strong>Para todos os momentos:</strong> Modelos exclusivos de <strong>R$ 168 a R$ 580</strong>. Aceitamos Pix ou Cartão de Crédito em até 3x.
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-6 h-6 rounded-full bg-terracotta/15 text-terracotta flex items-center justify-center shrink-0 mt-0.5">
+                            <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+                        </div>
+                        <p class="text-sm md:text-base text-espresso-dark/90">
+                            <strong>Pedidos Corporativos:</strong> Emitimos Nota Fiscal (NF-e) e personalizamos fitas e cartões com a logomarca da sua empresa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CTAs Principais -->
+                <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                    <a href="#catalogo" class="bg-terracotta hover:bg-terracotta-dark text-white text-center font-bold px-8 py-4 rounded-xl shadow-lg shadow-terracotta/25 transition flex items-center justify-center gap-3 text-base">
+                        <span>QUERO ESCOLHER MEU PRESENTE</span>
+                        <i data-lucide="arrow-down-right" class="w-5 h-5"></i>
+                    </a>
+                    <button onclick="abrirWhatsApp('Olá! Preciso de uma cesta para entrega rápida hoje. Quais modelos vocês têm disponíveis agora?')" 
+                        class="bg-white hover:bg-sand text-espresso-dark border border-taupe font-semibold px-6 py-4 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+                        <i data-lucide="clock" class="w-4 h-4 text-terracotta"></i>
+                        <span>Consultar Entrega para Hoje</span>
+                    </button>
+                </div>
+
+                <!-- Selos de Confiança -->
+                <div class="flex flex-wrap items-center gap-6 pt-2 text-xs text-espresso/70 font-medium">
+                    <span class="flex items-center gap-1.5">
+                        <i data-lucide="camera" class="w-4 h-4 text-terracotta"></i>
+                        Enviamos foto da cesta pronta antes de sair
+                    </span>
+                    <span class="flex items-center gap-1.5">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-sage"></i>
+                        Produção 100% artesanal e fresca do dia
+                    </span>
+                </div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-4">
-                    <div class="flex text-amber-400 gap-1">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <!-- Coluna de Imagem Real de Cesta de Café da Manhã (5 colunas) -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-sand aspect-[4/5]">
+                    <img src="https://unsplash.com/photos/EL8EBklDx8M/download?force=true&w=1000" 
+                         alt="Cesta de Café da Manhã Real em Madeira com Croissant, Morangos, Uvas e Flores Naturais" 
+                         class="w-full h-full object-cover">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-espresso-dark/70 via-transparent to-transparent"></div>
+
+                    <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-taupe/50 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-terracotta text-white p-2.5 rounded-xl shrink-0">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] font-bold uppercase tracking-wider text-terracotta">Fotos 100% Reais do Produto</p>
+                                <p class="text-xs sm:text-sm font-bold text-espresso-dark">Cesta Rústica Pinus & Flores Naturais</p>
+                            </div>
+                        </div>
+                        <a href="#catalogo" class="text-xs font-bold text-terracotta hover:underline shrink-0">Ver opções →</a>
                     </div>
-                    <p class="text-sm text-cream/90 italic leading-relaxed">
-                        "Minha esposa chorou de emoção quando abriu a porta! O cheirinho de pão fresco e o capricho no balão personalizado fizeram toda a diferença. Chegou pontualmente às 7h30 como combinamos!"
-                    </p>
-                    <div class="text-xs font-semibold text-terracotta">— Rafael M. (Presente de Aniversário)</div>
                 </div>
 
-                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-4">
-                    <div class="flex text-amber-400 gap-1">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <!-- Mini Foto Secundária Flutuante -->
+                <div class="hidden sm:flex items-center gap-3 absolute -top-5 -left-6 bg-white p-3 rounded-2xl shadow-xl border border-taupe max-w-[230px]">
+                    <img src="https://unsplash.com/photos/RlPu5Jtm9Bw/download?force=true&w=300" 
+                         alt="Detalhe bandeja de café da manhã com waffle e frutas" 
+                         class="w-14 h-14 rounded-xl object-cover shrink-0">
+                    <div>
+                        <div class="flex text-amber-400 text-xs">★★★★★</div>
+                        <p class="text-[11px] font-bold text-espresso-dark leading-tight mt-0.5">"Chegou às 7h em ponto, impecável!"</p>
+                        <p class="text-[10px] text-espresso/60">— Mariana C., Icaraí</p>
                     </div>
-                    <p class="text-sm text-cream/90 italic leading-relaxed">
-                        "Comprei de última hora às 9h da manhã para entregar para minha mãe e vocês salvaram o meu dia! Atendimento pelo WhatsApp super rápido, mandaram foto da cesta pronta antes de sair."
-                    </p>
-                    <div class="text-xs font-semibold text-terracotta">— Camila S. (Entrega no Mesmo Dia)</div>
                 </div>
+            </div>
 
-                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-4">
-                    <div class="flex text-amber-400 gap-1">
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                    </div>
-                    <p class="text-sm text-cream/90 italic leading-relaxed">
-                        "Encomendamos 8 cestas corporativas para premiar nossa equipe. Emitiram NF rapidinho e colocaram a fita e o cartão com a logo da empresa. Todos elogiaram a qualidade das frutas e dos pães."
-                    </p>
-                    <div class="text-xs font-semibold text-terracotta">— Fernanda L. (RH / Pedido Corporativo)</div>
+        </div>
+    </section>
+
+    <!-- 2. BARRA DE OCASIÕES -->
+    <section class="py-8 bg-sand/70 border-y border-taupe/60 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-espresso/70">Presentes perfeitos para:</span>
+                <div class="flex flex-wrap gap-2 md:gap-3">
+                    <a href="#catalogo" class="bg-white hover:bg-terracotta hover:text-white text-espresso-dark text-xs font-semibold px-4 py-2 rounded-full border border-taupe/80 transition flex items-center gap-1.5 shadow-sm">
+                        🎂 Aniversários
+                    </a>
+                    <a href="#catalogo" class="bg-white hover:bg-terracotta hover:text-white text-espresso-dark text-xs font-semibold px-4 py-2 rounded-full border border-taupe/80 transition flex items-center gap-1.5 shadow-sm">
+                        ❤️ Dia dos Namorados & Bodas
+                    </a>
+                    <a href="#catalogo" class="bg-white hover:bg-terracotta hover:text-white text-espresso-dark text-xs font-semibold px-4 py-2 rounded-full border border-taupe/80 transition flex items-center gap-1.5 shadow-sm">
+                        🤱 Maternidade & Boas-Vindas
+                    </a>
+                    <a href="#catalogo" class="bg-white hover:bg-terracotta hover:text-white text-espresso-dark text-xs font-semibold px-4 py-2 rounded-full border border-taupe/80 transition flex items-center gap-1.5 shadow-sm">
+                        🙏 Agradecimento & Pedido de Desculpas
+                    </a>
+                    <a href="#catalogo" class="bg-white hover:bg-terracotta hover:text-white text-espresso-dark text-xs font-semibold px-4 py-2 rounded-full border border-taupe/80 transition flex items-center gap-1.5 shadow-sm">
+                        🏢 Brindes Corporativos
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. COMO FUNCIONA COMPRAR (4 Passos Simples) -->
-    <section id="como-funciona" class="py-16 md:py-24 px-4 bg-sand/40">
+    <!-- 3. VITRINE DE PRODUTOS COM FOTOS REAIS DE CESTAS E BOXES -->
+    <section id="catalogo" class="py-16 md:py-24 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+                <span class="inline-block bg-terracotta/10 text-terracotta text-xs font-bold uppercase tracking-widest px-3.5 py-1 rounded-full">
+                    Curadoria Artesanal • Fotos Reais
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-espresso-dark">
+                    Escolha a Cesta ou Box Ideal
+                </h2>
+                <p class="text-sm md:text-base text-espresso/75">
+                    Modelos pensados nos mínimos detalhes, com opções a partir de <strong>R$ 168,00</strong>. Todos acompanham cartão com sua mensagem e embalagem de presente com laço de cetim.
+                </p>
+            </div>
+
+            <!-- Grid de 6 Cestas Reais -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- CARD 1: Box Delicatesse -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-card hover:shadow-xl transition duration-300 border border-taupe/70 flex flex-col group">
+                    <div class="h-72 overflow-hidden relative bg-sand">
+                        <img src="https://unsplash.com/photos/Ku67dI7HjMw/download?force=true&w=800" 
+                             alt="Box Delicatesse Branca com Waffles, Morangos, Uvas, Queijos e Biscoitos" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <span class="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-sm text-espresso-dark text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm">
+                            🎁 Mimo Encantador
+                        </span>
+                        <span class="absolute bottom-3 right-3 bg-espresso-dark/80 backdrop-blur-sm text-cream text-[11px] font-medium px-2.5 py-1 rounded-lg">
+                            Serve 1 pessoa
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-2xl font-bold text-espresso-dark leading-tight">Box Delicatesse</h3>
+                                <div class="text-right shrink-0">
+                                    <span class="text-xl font-extrabold text-terracotta block">R$ 168,00</span>
+                                    <span class="text-[10px] text-espresso/60">ou 3x de R$ 56,00</span>
+                                </div>
+                            </div>
+                            <p class="text-xs font-semibold text-terracotta mb-2 flex items-center gap-1">
+                                <i data-lucide="package" class="w-3.5 h-3.5"></i> Caixa rígida branca com fita de cetim e cartão
+                            </p>
+                            <p class="text-sm text-espresso/80 leading-relaxed">
+                                Um mimo simbólico, delicado e cheio de sabor. Contém waffles belgas artesanais, pão de queijo, seleção de uvas e morangos frescos, figos, damascos, queijo nobre, frios selecionados, biscoitos amanteigados e sachês de chá importado.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-sand space-y-2">
+                            <button onclick="pedirProduto('Box Delicatesse', 'R$ 168,00')" class="w-full bg-espresso-dark hover:bg-terracotta text-white font-bold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Quero personalizar agora</span>
+                            </button>
+                            <p class="text-[11px] text-center text-espresso/60 flex items-center justify-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-whatsapp"></span> Consultar disponibilidade de entrega rápida
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 2: Cesta Bonjour Pinus -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-card hover:shadow-xl transition duration-300 border border-taupe/70 flex flex-col group">
+                    <div class="h-72 overflow-hidden relative bg-sand">
+                        <img src="https://unsplash.com/photos/tBy6Jo6cYU8/download?force=true&w=800" 
+                             alt="Cesta de Madeira Bonjour com Croissant, Suco Natural em Garrafa, Geleia Artesanal e Biscoitos" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <span class="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-sm text-espresso-dark text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm">
+                            🥐 Clássica Artesanal
+                        </span>
+                        <span class="absolute bottom-3 right-3 bg-espresso-dark/80 backdrop-blur-sm text-cream text-[11px] font-medium px-2.5 py-1 rounded-lg">
+                            Com 2 Fotos Polaroid
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-2xl font-bold text-espresso-dark leading-tight">Cesta Bonjour Pinus</h3>
+                                <div class="text-right shrink-0">
+                                    <span class="text-xl font-extrabold text-terracotta block">R$ 239,00</span>
+                                    <span class="text-[10px] text-espresso/60">ou 3x de R$ 79,66</span>
+                                </div>
+                            </div>
+                            <p class="text-xs font-semibold text-terracotta mb-2 flex items-center gap-1">
+                                <i data-lucide="box" class="w-3.5 h-3.5"></i> Cesta em madeira Pinus reutilizável + 2 Polaroids
+                            </p>
+                            <p class="text-sm text-espresso/80 leading-relaxed">
+                                O verdadeiro café de padaria artesanal em casa. Suco integral em garrafa de vidro, croissant francês amanteigado, brioche, cookies com gotas de chocolate, geleia artesanal em pote de vidro, manteiga, drip coffee, frutas da estação e flores secas.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-sand space-y-2">
+                            <button onclick="pedirProduto('Cesta Bonjour Pinus', 'R$ 239,00')" class="w-full bg-espresso-dark hover:bg-terracotta text-white font-bold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Quero personalizar agora</span>
+                            </button>
+                            <p class="text-[11px] text-center text-espresso/60 flex items-center justify-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-whatsapp"></span> Consultar disponibilidade de entrega rápida
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 3: Cesta Manhã com Afeto - MAIS VENDIDA -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-xl transition duration-300 border-2 border-terracotta flex flex-col group relative">
+                    <div class="h-72 overflow-hidden relative bg-sand">
+                        <img src="https://unsplash.com/photos/EL8EBklDx8M/download?force=true&w=800" 
+                             alt="Cesta Manhã com Afeto com Flores, Croissant, Morangos, Uvas e Iogurte" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <span class="absolute top-3.5 left-3.5 bg-terracotta text-white text-xs font-bold px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-1">
+                            ⭐ Campeã de Vendas
+                        </span>
+                        <span class="absolute bottom-3 right-3 bg-espresso-dark/80 backdrop-blur-sm text-cream text-[11px] font-medium px-2.5 py-1 rounded-lg">
+                            Acompanha Arranjo Floral
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-2xl font-bold text-espresso-dark leading-tight">Cesta Manhã com Afeto</h3>
+                                <div class="text-right shrink-0">
+                                    <span class="text-xl font-extrabold text-terracotta block">R$ 289,00</span>
+                                    <span class="text-[10px] text-espresso/60">ou 3x de R$ 96,33</span>
+                                </div>
+                            </div>
+                            <p class="text-xs font-semibold text-terracotta mb-2 flex items-center gap-1">
+                                <i data-lucide="flower-2" class="w-3.5 h-3.5"></i> Nome gravado na caixa + Buquê de Flores + Polaroids
+                            </p>
+                            <p class="text-sm text-espresso/80 leading-relaxed">
+                                Criada para emocionar logo no primeiro olhar! Cesta em Pinus personalizada com nome, lindo mini buquê de flores naturais, croissant, bolo caseiro, iogurte grego, granola, morangos e uvas selecionadas, queijo meia cura, suco natural e drip coffee.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-sand space-y-2">
+                            <button onclick="pedirProduto('Cesta Manhã com Afeto (Mais Vendida)', 'R$ 289,00')" class="w-full bg-terracotta hover:bg-terracotta-dark text-white font-bold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-md shadow-terracotta/20">
+                                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                                <span>Quero personalizar agora</span>
+                            </button>
+                            <p class="text-[11px] text-center text-espresso/60 flex items-center justify-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-whatsapp"></span> Consultar disponibilidade de entrega rápida
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 4: Bandeja Étoile du Matin -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-card hover:shadow-xl transition duration-300 border border-taupe/70 flex flex-col group">
+                    <div class="h-72 overflow-hidden relative bg-sand">
+                        <img src="https://unsplash.com/photos/QWRLbo3v440/download?force=true&w=800" 
+                             alt="Bandeja de Madeira com Queijo Brie, Croissant, Morangos, Barra de Chocolate e Chás" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <span class="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-sm text-espresso-dark text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm">
+                            🧀 Gourmet & Queijo Brie
+                        </span>
+                        <span class="absolute bottom-3 right-3 bg-espresso-dark/80 backdrop-blur-sm text-cream text-[11px] font-medium px-2.5 py-1 rounded-lg">
+                            Bandeja Reutilizável
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-2xl font-bold text-espresso-dark leading-tight">Bandeja Étoile du Matin</h3>
+                                <div class="text-right shrink-0">
+                                    <span class="text-xl font-extrabold text-terracotta block">R$ 329,00</span>
+                                    <span class="text-[10px] text-espresso/60">ou 3x de R$ 109,66</span>
+                                </div>
+                            </div>
+                            <p class="text-xs font-semibold text-terracotta mb-2 flex items-center gap-1">
+                                <i data-lucide="utensils" class="w-3.5 h-3.5"></i> Bandeja de cama em madeira nobre + Caneca
+                            </p>
+                            <p class="text-sm text-espresso/80 leading-relaxed">
+                                Sofisticação para paladares exigentes. Queijo Brie francês com geleia artesanal e mel, croissant de amêndoas, ciabatta de fermentação natural, barra de chocolate nobre, morangos frescos, castanhas, capuccino especial e caneca de porcelana.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-sand space-y-2">
+                            <button onclick="pedirProduto('Bandeja Étoile du Matin', 'R$ 329,00')" class="w-full bg-espresso-dark hover:bg-terracotta text-white font-bold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Quero personalizar agora</span>
+                            </button>
+                            <p class="text-[11px] text-center text-espresso/60 flex items-center justify-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-whatsapp"></span> Consultar disponibilidade de entrega rápida
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 5: Bandeja Celebração & Nutella -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-card hover:shadow-xl transition duration-300 border border-taupe/70 flex flex-col group">
+                    <div class="h-72 overflow-hidden relative bg-sand">
+                        <img src="https://unsplash.com/photos/RlPu5Jtm9Bw/download?force=true&w=800" 
+                             alt="Bandeja Celebração com Flores, Waffles, Nutella, Queijos, Presunto, Uvas e Morangos" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <span class="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-sm text-espresso-dark text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm">
+                            🎈 Com Balão Personalizado
+                        </span>
+                        <span class="absolute bottom-3 right-3 bg-espresso-dark/80 backdrop-blur-sm text-cream text-[11px] font-medium px-2.5 py-1 rounded-lg">
+                            Ideal para Aniversários
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-2xl font-bold text-espresso-dark leading-tight">Box Celebração & Balão</h3>
+                                <div class="text-right shrink-0">
+                                    <span class="text-xl font-extrabold text-terracotta block">R$ 369,00</span>
+                                    <span class="text-[10px] text-espresso/60">ou 3x de R$ 123,00</span>
+                                </div>
+                            </div>
+                            <p class="text-xs font-semibold text-terracotta mb-2 flex items-center gap-1">
+                                <i data-lucide="party-popper" class="w-3.5 h-3.5"></i> Inclui Balão Bubble com frase + Arranjo de Flores
+                            </p>
+                            <p class="text-sm text-espresso/80 leading-relaxed">
+                                Impacto visual garantido no momento da entrega! Acompanha Balão Bubble personalizado com nome/frase, waffles com Nutella, tábua de frios e queijos, pães artesanais, iogurte, mix de castanhas, uvas, morangos, suco integral e flores naturais.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-sand space-y-2">
+                            <button onclick="pedirProduto('Box Celebração & Balão', 'R$ 369,00')" class="w-full bg-espresso-dark hover:bg-terracotta text-white font-bold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Quero personalizar agora</span>
+                            </button>
+                            <p class="text-[11px] text-center text-espresso/60 flex items-center justify-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-whatsapp"></span> Consultar disponibilidade de entrega rápida
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 6: Crate Imperial Brunch para Dois -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-card hover:shadow-xl transition duration-300 border border-taupe/70 flex flex-col group">
+                    <div class="h-72 overflow-hidden relative bg-sand">
+                        <img src="https://unsplash.com/photos/4HE4wcL_qTE/download?force=true&w=800" 
+                             alt="Caixa de Madeira Imperial com Flores, Sucos, Figos, Uvas, Queijos e Folhados" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <span class="absolute top-3.5 left-3.5 bg-espresso-dark text-cream text-xs font-bold px-3.5 py-1.5 rounded-full shadow-sm">
+                            🥂 Experiência Casal / 2 Pessoas
+                        </span>
+                        <span class="absolute bottom-3 right-3 bg-terracotta text-white text-[11px] font-bold px-2.5 py-1 rounded-lg">
+                            Linha Luxo
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-5">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-2xl font-bold text-espresso-dark leading-tight">Baú Imperial Brunch (Casal)</h3>
+                                <div class="text-right shrink-0">
+                                    <span class="text-xl font-extrabold text-terracotta block">R$ 489,00</span>
+                                    <span class="text-[10px] text-espresso/60">ou 3x de R$ 163,00</span>
+                                </div>
+                            </div>
+                            <p class="text-xs font-semibold text-terracotta mb-2 flex items-center gap-1">
+                                <i data-lucide="wine" class="w-3.5 h-3.5"></i> Serve 2 pessoas • Flores Nobres + 2 Bebidas + Polaroids
+                            </p>
+                            <p class="text-sm text-espresso/80 leading-relaxed">
+                                Nossa experiência mais completa para celebrar bodas, aniversários de casamento ou surpreender em família. Tudo em dobro: 2 sucos reserva (ou Baby Chandon opcional), seleção de queijos finos, figos e uvas, folhados franceses, bolo artesanal, trufas e arranjo floral.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-sand space-y-2">
+                            <button onclick="pedirProduto('Baú Imperial Brunch (Casal)', 'R$ 489,00')" class="w-full bg-espresso-dark hover:bg-terracotta text-white font-bold py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-sm">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Quero personalizar agora</span>
+                            </button>
+                            <p class="text-[11px] text-center text-espresso/60 flex items-center justify-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-whatsapp"></span> Consultar disponibilidade de entrega rápida
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Banner de Montagem Personalizada -->
+            <div class="mt-14 bg-sand border border-taupe rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="space-y-2 text-center md:text-left">
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Do seu jeito</span>
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold text-espresso-dark">
+                        Quer adicionar Balão, Caneca com Nome, Orquídea ou Chandon?
+                    </h3>
+                    <p class="text-sm text-espresso/80 max-w-xl">
+                        Use nosso simulador rápido para escolher os itens adicionais da sua cesta ou peça ajuda diretamente à nossa equipe pelo WhatsApp.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+                    <button onclick="abrirModalPersonalizar()" class="bg-terracotta hover:bg-terracotta-dark text-white font-bold px-6 py-3.5 rounded-xl transition flex items-center justify-center gap-2 text-sm shadow-md">
+                        <i data-lucide="wand-2" class="w-4 h-4"></i>
+                        <span>Simular Cesta Personalizada</span>
+                    </button>
+                    <button onclick="abrirWhatsApp('Olá! Gostaria de ver as opções de itens extras e também opções Sem Lactose / Fit.')" class="bg-white hover:bg-cream text-espresso-dark border border-taupe font-semibold px-5 py-3.5 rounded-xl transition text-sm">
+                        Falar com Especialista
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. EXPERIÊNCIA DE PERSONALIZAÇÃO -->
+    <section id="personalizacao" class="py-16 bg-espresso-dark text-cream px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-5 space-y-5">
+                    <span class="text-xs font-bold uppercase tracking-widest text-terracotta-light">Mais que uma cesta, uma recordação</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold leading-tight">
+                        Por que nossas cestas emocionam tanto quem recebe?
+                    </h2>
+                    <p class="text-sm text-cream/80 leading-relaxed">
+                        Não entregamos itens industrializados de supermercado. Cada cesta é montada artesanalmente na manhã da entrega, com pães assados na hora e detalhes personalizados que ficam guardados para sempre.
+                    </p>
+                    <div class="pt-2">
+                        <button onclick="abrirWhatsApp('Olá! Quero personalizar uma cesta com nome e fotos Polaroid. Como envio as fotos?')" class="bg-whatsapp hover:bg-whatsappDark text-white font-bold px-6 py-3.5 rounded-xl transition inline-flex items-center gap-2 text-sm">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Personalizar pelo WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-terracotta/20 text-terracotta-light flex items-center justify-center mb-3">
+                            <i data-lucide="image" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-white">Fotos Estilo Polaroid Inclusas</h3>
+                        <p class="text-xs text-cream/75 leading-relaxed">
+                            Você nos envia suas fotos favoritas pelo WhatsApp e nós revelamos em formato Polaroid retrô para acompanhar a cesta em um mini cavalete ou grampo decorativo.
+                        </p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-terracotta/20 text-terracotta-light flex items-center justify-center mb-3">
+                            <i data-lucide="pen-tool" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-white">Nome na Madeira, Caneca ou Balão</h3>
+                        <p class="text-xs text-cream/75 leading-relaxed">
+                            Personalizamos o nome da pessoa amada na caixa de madeira Pinus, na caneca de porcelana ou no Balão Bubble transparente em caligrafia elegante.
+                        </p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-terracotta/20 text-terracotta-light flex items-center justify-center mb-3">
+                            <i data-lucide="wheat" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-white">Fermentação Natural & Zero Industrializados</h3>
+                        <p class="text-xs text-cream/75 leading-relaxed">
+                            Croissants franceses legítimos, ciabattas, bolos caseiros, geleias sem conservantes e frutas higienizadas e selecionadas uma a uma.
+                        </p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-2">
+                        <div class="w-10 h-10 rounded-xl bg-terracotta/20 text-terracotta-light flex items-center justify-center mb-3">
+                            <i data-lucide="mail-open" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-white">Cartão em Papel Texturizado com Lacre</h3>
+                        <p class="text-xs text-cream/75 leading-relaxed">
+                            Sua mensagem é impressa em papel couchê ou linho de alta gramatura, fechada em envelope perfumado para criar suspense e emoção ao abrir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. INFORMAÇÕES DE ENTREGA E LOGÍSTICA -->
+    <section id="entrega" class="py-16 md:py-20 bg-sand/60 border-b border-taupe/60 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Logística Cuidadosa</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-espresso-dark mt-1">Informações de Entrega</h2>
+                <p class="text-sm text-espresso/75 mt-2">
+                    Sabemos que pontualidade e apresentação impecável são fundamentais para uma surpresa de café da manhã.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-7 rounded-3xl border border-taupe/70 shadow-soft">
+                    <div class="w-12 h-12 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center mb-5">
+                        <i data-lucide="clock" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-espresso-dark mb-2">Janelas de Horário & Entrega Hoje</h3>
+                    <p class="text-sm text-espresso/80 leading-relaxed">
+                        Realizamos entregas todos os dias (incluindo domingos e feriados) das <strong>06h30 às 20h</strong>. Para pedidos no mesmo dia, consulte a disponibilidade imediata pelo nosso WhatsApp.
+                    </p>
+                </div>
+
+                <div class="bg-white p-7 rounded-3xl border border-taupe/70 shadow-soft">
+                    <div class="w-12 h-12 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center mb-5">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-espresso-dark mb-2">Regiões Atendidas & Frete</h3>
+                    <p class="text-sm text-espresso/80 leading-relaxed">
+                        Atendemos toda <strong>Niterói</strong> (Icaraí, Santa Rosa, Fonseca, Ingá, Centro, São Francisco, Região Oceânica), <strong>São Gonçalo</strong> e <strong>Rio de Janeiro</strong> (Zona Sul, Centro, Tijuca e Barra) com taxa tabelada.
+                    </p>
+                </div>
+
+                <div class="bg-white p-7 rounded-3xl border border-taupe/70 shadow-soft">
+                    <div class="w-12 h-12 rounded-2xl bg-terracotta/10 text-terracotta flex items-center justify-center mb-5">
+                        <i data-lucide="car-front" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-espresso-dark mb-2">Transporte Exclusivo de Carro</h3>
+                    <p class="text-sm text-espresso/80 leading-relaxed">
+                        Cestas com flores, sucos e balões são delicadas. Por isso, nossas entregas são feitas por <strong>motoristas parceiros de carro com ar-condicionado</strong>, garantindo que tudo chegue intacto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. PROVA SOCIAL -->
+    <section id="depoimentos" class="py-16 md:py-24 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Mais de 240 avaliações 5 estrelas</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-espresso-dark mt-2">
+                    Reações de quem já se encantou com nossas cestas
+                </h2>
+                <p class="text-sm text-espresso/70 mt-2">
+                    Feedbacks espontâneos que recebemos todos os dias no WhatsApp e Google.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white border border-taupe/80 p-6 rounded-3xl shadow-card flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="text-[11px] font-semibold text-sage bg-sage/10 px-2.5 py-0.5 rounded-full">Compra Verificada</span>
+                        </div>
+                        <p class="text-sm text-espresso/85 italic leading-relaxed">
+                            "Eu moro fora do Brasil e queria fazer uma surpresa de aniversário para minha mãe. O atendimento pelo WhatsApp foi impecável, me mandaram foto da cesta pronta com as Polaroids da nossa família às 6h40 da manhã! Minha mãe me ligou chorando de emoção."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-3 border-t border-sand">
+                        <div class="w-9 h-9 rounded-full bg-terracotta/20 text-terracotta font-bold flex items-center justify-center text-xs">
+                            LC
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-espresso-dark">Letícia Vasconcelos</p>
+                            <p class="text-[11px] text-espresso/60">Encomendou a Cesta Manhã com Afeto</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-taupe/80 p-6 rounded-3xl shadow-card flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="text-[11px] font-semibold text-sage bg-sage/10 px-2.5 py-0.5 rounded-full">Compra Verificada</span>
+                        </div>
+                        <p class="text-sm text-espresso/85 italic leading-relaxed">
+                            "Qualidade absurda dos produtos! Nada daqueles biscoitinhos industrializados de mercado: o croissant parecia saído de uma confeitaria francesa, o queijo Brie com geleia estava divino e as uvas super doces. Vale cada centavo!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-3 border-t border-sand">
+                        <div class="w-9 h-9 rounded-full bg-terracotta/20 text-terracotta font-bold flex items-center justify-center text-xs">
+                            RM
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-espresso-dark">Rodrigo Mendonça</p>
+                            <p class="text-[11px] text-espresso/60">Encomendou a Bandeja Étoile du Matin</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-taupe/80 p-6 rounded-3xl shadow-card flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                            <span class="text-[11px] font-semibold text-sage bg-sage/10 px-2.5 py-0.5 rounded-full">Pedido Corporativo</span>
+                        </div>
+                        <p class="text-sm text-espresso/85 italic leading-relaxed">
+                            "Fechamos 12 boxes personalizadas para o onboarding de novos executivos da empresa. Emitiram Nota Fiscal super rápido, incluíram nossa logo na tag e entregaram em 12 endereços diferentes na mesma manhã sem nenhum atraso."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-3 border-t border-sand">
+                        <div class="w-9 h-9 rounded-full bg-terracotta/20 text-terracotta font-bold flex items-center justify-center text-xs">
+                            BP
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-espresso-dark">Beatriz Peixoto (Gestora de RH)</p>
+                            <p class="text-[11px] text-espresso/60">Encomendou 12x Box Delicatesse</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. COMO FUNCIONA -->
+    <section class="py-16 bg-sand/50 border-t border-taupe/60 px-4">
         <div class="max-w-5xl mx-auto">
             <div class="text-center max-w-xl mx-auto mb-12">
                 <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Simples, rápido e sem complicação</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-coffee-dark mt-2">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-espresso-dark mt-1">
                     Como funciona comprar conosco
                 </h2>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-2xl border border-sand relative">
-                    <span class="text-4xl font-serif font-bold text-terracotta/25 absolute top-4 right-5">01</span>
-                    <div class="w-10 h-10 rounded-full bg-sand text-coffee-dark flex items-center justify-center font-bold mb-4">
-                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                <div class="bg-white p-6 rounded-2xl border border-taupe/70 relative shadow-sm">
+                    <span class="text-4xl font-serif font-bold text-terracotta/20 absolute top-3 right-4">01</span>
+                    <div class="w-10 h-10 rounded-xl bg-sand text-espresso-dark flex items-center justify-center font-bold mb-4">
+                        <i data-lucide="gift" class="w-5 h-5 text-terracotta"></i>
                     </div>
-                    <h3 class="font-bold text-base mb-2">Escolha a data e horário</h3>
-                    <p class="text-xs text-coffee-dark/75 leading-relaxed">
-                        Informe o dia e a janela de horário ideal para surpreender quem vai receber.
+                    <h3 class="font-bold text-base mb-1.5">Escolha o modelo ideal</h3>
+                    <p class="text-xs text-espresso/75 leading-relaxed">
+                        Selecione uma das nossas cestas no catálogo ou monte a sua opção personalizada.
                     </p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border border-sand relative">
-                    <span class="text-4xl font-serif font-bold text-terracotta/25 absolute top-4 right-5">02</span>
-                    <div class="w-10 h-10 rounded-full bg-sand text-coffee-dark flex items-center justify-center font-bold mb-4">
-                        <i data-lucide="gift" class="w-5 h-5"></i>
+                <div class="bg-white p-6 rounded-2xl border border-taupe/70 relative shadow-sm">
+                    <span class="text-4xl font-serif font-bold text-terracotta/20 absolute top-3 right-4">02</span>
+                    <div class="w-10 h-10 rounded-xl bg-sand text-espresso-dark flex items-center justify-center font-bold mb-4">
+                        <i data-lucide="heart-handshake" class="w-5 h-5 text-terracotta"></i>
                     </div>
-                    <h3 class="font-bold text-base mb-2">Escolha e personalize</h3>
-                    <p class="text-xs text-coffee-dark/75 leading-relaxed">
-                        Defina o modelo da cesta, cores do laço/balão, texto do cartão e itens extras.
+                    <h3 class="font-bold text-base mb-1.5">Personalize pelo WhatsApp</h3>
+                    <p class="text-xs text-espresso/75 leading-relaxed">
+                        Envie a mensagem do cartão, o nome para gravação e as fotos para revelarmos em Polaroid.
                     </p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border border-sand relative">
-                    <span class="text-4xl font-serif font-bold text-terracotta/25 absolute top-4 right-5">03</span>
-                    <div class="w-10 h-10 rounded-full bg-sand text-coffee-dark flex items-center justify-center font-bold mb-4">
-                        <i data-lucide="car" class="w-5 h-5"></i>
+                <div class="bg-white p-6 rounded-2xl border border-taupe/70 relative shadow-sm">
+                    <span class="text-4xl font-serif font-bold text-terracotta/20 absolute top-3 right-4">03</span>
+                    <div class="w-10 h-10 rounded-xl bg-sand text-espresso-dark flex items-center justify-center font-bold mb-4">
+                        <i data-lucide="calendar-clock" class="w-5 h-5 text-terracotta"></i>
                     </div>
-                    <h3 class="font-bold text-base mb-2">Defina a entrega</h3>
-                    <p class="text-xs text-coffee-dark/75 leading-relaxed">
-                        Escolha entre nosso motorista parceiro de confiança ou retirada/Uber Flash Carro.
+                    <h3 class="font-bold text-base mb-1.5">Agende a entrega</h3>
+                    <p class="text-xs text-espresso/75 leading-relaxed">
+                        Defina a data, o endereço e a janela de horário (motorista parceiro exclusivo ou retirada).
                     </p>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border border-sand relative">
-                    <span class="text-4xl font-serif font-bold text-terracotta/25 absolute top-4 right-5">04</span>
-                    <div class="w-10 h-10 rounded-full bg-sand text-coffee-dark flex items-center justify-center font-bold mb-4">
-                        <i data-lucide="check" class="w-5 h-5"></i>
+                <div class="bg-white p-6 rounded-2xl border border-taupe/70 relative shadow-sm">
+                    <span class="text-4xl font-serif font-bold text-terracotta/20 absolute top-3 right-4">04</span>
+                    <div class="w-10 h-10 rounded-xl bg-sand text-espresso-dark flex items-center justify-center font-bold mb-4">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-terracotta"></i>
                     </div>
-                    <h3 class="font-bold text-base mb-2">Pix ou Cartão e pronto!</h3>
-                    <p class="text-xs text-coffee-dark/75 leading-relaxed">
-                        Você não precisa se preocupar com mais nada. Cuidamos de tudo até a entrega!
+                    <h3 class="font-bold text-base mb-1.5">Pix ou Cartão e pronto!</h3>
+                    <p class="text-xs text-espresso/75 leading-relaxed">
+                        Enviamos foto da cesta pronta antes de sair e avisamos você assim que for entregue!
                     </p>
                 </div>
-            </div>
-
-            <div class="mt-10 text-center">
-                <button onclick="abrirWhatsApp('Olá! Quero encomendar uma cesta de café da manhã. Pode me ajudar?')" 
-                    class="bg-terracotta hover:bg-coffee text-white font-bold px-8 py-4 rounded-xl shadow-lg transition inline-flex items-center gap-2">
-                    <span>QUERO ESCOLHER MEU PRESENTE</span>
-                    <i data-lucide="message-circle" class="w-5 h-5"></i>
-                </button>
             </div>
         </div>
     </section>
 
-    <!-- 6. PERGUNTAS FREQUENTES (FAQ em Acordeão) -->
+    <!-- 8. PERGUNTAS FREQUENTES (FAQ) -->
     <section id="faq" class="py-16 md:py-24 px-4">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-coffee-dark">Perguntas Frequentes</h2>
-                <p class="text-sm text-coffee-dark/70 mt-2">Tire suas dúvidas antes de finalizar o seu pedido</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-espresso-dark">Perguntas Frequentes</h2>
+                <p class="text-sm text-espresso/70 mt-2">Tudo o que você precisa saber antes de encomendar sua cesta</p>
             </div>
 
-            <div class="space-y-4">
-                <details class="group bg-white rounded-2xl border border-sand p-5 [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 font-bold text-coffee-dark">
-                        <span>Como funciona a compra e a confirmação do pedido?</span>
-                        <span class="shrink-0 rounded-full bg-sand p-1.5 text-coffee-dark sm:p-2 group-open:rotate-180 transition">
+            <div class="space-y-3.5">
+                <details class="group bg-white rounded-2xl border border-taupe/80 p-5 [&_summary::-webkit-details-marker]:hidden shadow-sm" open>
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 font-bold text-espresso-dark text-sm md:text-base">
+                        <span>Como funciona a reserva e o pagamento do pedido?</span>
+                        <span class="shrink-0 rounded-full bg-sand p-1.5 text-espresso-dark group-open:rotate-180 transition">
                             <i data-lucide="chevron-down" class="w-4 h-4"></i>
                         </span>
                     </summary>
-                    <p class="mt-4 leading-relaxed text-sm text-coffee-dark/80">
-                        É simples, rápido e feito com carinho: você escolhe a cesta, personaliza tudo pelo WhatsApp e combinamos a entrega no horário ideal. Para garantir a reserva da vaga na agenda e a produção fresca, o pagamento é feito 100% no ato do pedido via <strong>Pix ou Cartão de Crédito</strong>.
+                    <p class="mt-3 leading-relaxed text-sm text-espresso/80">
+                        Você escolhe sua cesta e personaliza todos os detalhes diretamente com nossa equipe no WhatsApp. Para garantir a reserva na agenda de entregas e a produção artesanal fresca, o pagamento é realizado no ato do pedido via <strong>Pix</strong> ou <strong>Cartão de Crédito (link seguro de pagamento)</strong>.
                     </p>
                 </details>
 
-                <details class="group bg-white rounded-2xl border border-sand p-5 [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 font-bold text-coffee-dark">
-                        <span>Posso personalizar os itens da cesta?</span>
-                        <span class="shrink-0 rounded-full bg-sand p-1.5 text-coffee-dark sm:p-2 group-open:rotate-180 transition">
+                <details class="group bg-white rounded-2xl border border-taupe/80 p-5 [&_summary::-webkit-details-marker]:hidden shadow-sm">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 font-bold text-espresso-dark text-sm md:text-base">
+                        <span>Consigo encomendar para entrega no mesmo dia?</span>
+                        <span class="shrink-0 rounded-full bg-sand p-1.5 text-espresso-dark group-open:rotate-180 transition">
                             <i data-lucide="chevron-down" class="w-4 h-4"></i>
                         </span>
                     </summary>
-                    <p class="mt-4 leading-relaxed text-sm text-coffee-dark/80">
-                        Sim! Você pode escolher: nome personalizado na caneca ou no balão, cores da fita e decoração, mensagem no cartão (ou fotos estilo Polaroid) e ainda adicionar itens extras como flores, pelúcias, chocolates finos ou substituir itens caso o presenteado tenha restrição alimentar (ex: sem lactose ou vegetariano).
+                    <p class="mt-3 leading-relaxed text-sm text-espresso/80">
+                        <strong>Sim!</strong> Reservamos uma cota diária de cestas para pedidos de última hora (com preparo em cerca de 2h a 3h). Basta clicar no botão de WhatsApp e verificar a disponibilidade imediata para o seu bairro.
                     </p>
                 </details>
 
-                <details class="group bg-white rounded-2xl border border-sand p-5 [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 font-bold text-coffee-dark">
-                        <span>Qual a antecedência mínima para encomendar? Têm entrega hoje?</span>
-                        <span class="shrink-0 rounded-full bg-sand p-1.5 text-coffee-dark sm:p-2 group-open:rotate-180 transition">
+                <details class="group bg-white rounded-2xl border border-taupe/80 p-5 [&_summary::-webkit-details-marker]:hidden shadow-sm">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 font-bold text-espresso-dark text-sm md:text-base">
+                        <span>Vocês têm opções Sem Lactose, Sem Glúten ou Vegetarianas?</span>
+                        <span class="shrink-0 rounded-full bg-sand p-1.5 text-espresso-dark group-open:rotate-180 transition">
                             <i data-lucide="chevron-down" class="w-4 h-4"></i>
                         </span>
                     </summary>
-                    <p class="mt-4 leading-relaxed text-sm text-coffee-dark/80">
-                        Para cestas com itens personalizados com nome (caneca/balão), recomendamos pedir com pelo menos 24h de antecedência. <strong>Precisa para hoje com urgência?</strong> Temos opções a pronta-entrega que ficam prontas em até 3 horas! Chame no WhatsApp para verificar a disponibilidade imediata.
+                    <p class="mt-3 leading-relaxed text-sm text-espresso/80">
+                        Sim! Como montamos cada cesta sob encomenda, podemos substituir frios, iogurtes, queijos e pães por versões <strong>Zero Lactose, Vegetarianas ou Linha Leve/Fit</strong>. Informe a restrição alimentar no WhatsApp que adaptamos o cardápio com todo cuidado.
                     </p>
                 </details>
 
-                <details class="group bg-white rounded-2xl border border-sand p-5 [&_summary::-webkit-details-marker]:hidden">
-                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 font-bold text-coffee-dark">
-                        <span>Como funciona a entrega?</span>
-                        <span class="shrink-0 rounded-full bg-sand p-1.5 text-coffee-dark sm:p-2 group-open:rotate-180 transition">
+                <details class="group bg-white rounded-2xl border border-taupe/80 p-5 [&_summary::-webkit-details-marker]:hidden shadow-sm">
+                    <summary class="flex cursor-pointer items-center justify-between gap-1.5 font-bold text-espresso-dark text-sm md:text-base">
+                        <span>E se a pessoa presenteada não souber que vai receber (surpresa)?</span>
+                        <span class="shrink-0 rounded-full bg-sand p-1.5 text-espresso-dark group-open:rotate-180 transition">
                             <i data-lucide="chevron-down" class="w-4 h-4"></i>
                         </span>
                     </summary>
-                    <p class="mt-4 leading-relaxed text-sm text-coffee-dark/80">
-                        Nossa entrega é monitorada em tempo real. Você pode escolher receber com <strong>nossos motoristas parceiros de confiança</strong> (agendamos a janela de horário para chegar no momento certo) ou solicitar <strong>Uber Flash (modalidade Carro)</strong> por conta do cliente.
+                    <p class="mt-3 leading-relaxed text-sm text-espresso/80">
+                        Somos especialistas em entregas surpresa! Nunca revelamos o conteúdo antes da entrega e coordenamos com você pelo WhatsApp o momento exato em que o motorista chega à portaria ou residência.
                     </p>
                 </details>
             </div>
         </div>
     </section>
 
-    <!-- 7. RODAPÉ & CONTATO DIRETO -->
-    <footer class="bg-coffee-dark text-cream/80 py-12 px-4 border-t border-white/10">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 items-center text-center md:text-left">
-            <div>
-                <a href="#" class="font-serif text-2xl font-bold text-cream flex items-center justify-center md:justify-start gap-2">
-                    <i data-lucide="coffee" class="w-6 h-6 text-terracotta"></i>
-                    Manhã com Afeto
-                </a>
-                <p class="text-xs text-cream/60 mt-2">
-                    Cestas de Café da Manhã Artesanais & Presentes Personalizados.
+    <!-- 9. RODAPÉ PROFISSIONAL -->
+    <footer class="bg-espresso-dark text-cream/80 py-14 px-4 border-t border-white/10">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 items-start">
+            <div class="space-y-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-terracotta text-white flex items-center justify-center">
+                        <i data-lucide="croissant" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-serif text-2xl font-bold text-white">Manhã com Afeto</span>
+                </div>
+                <p class="text-xs text-cream/65 leading-relaxed max-w-xs">
+                    Transformando manhãs comuns em memórias inesquecíveis através da gastronomia artesanal e presentes personalizados.
                 </p>
             </div>
 
-            <div class="text-center">
-                <p class="text-xs uppercase tracking-widest text-terracotta font-bold mb-1">Entrega Rápida e Agendada</p>
-                <p class="text-sm font-medium text-cream">Nos chame no WhatsApp:</p>
-                <button onclick="abrirWhatsApp('Olá! Gostaria de fazer um orçamento de cesta de café da manhã.')" 
-                    class="text-lg font-bold text-whatsapp hover:underline mt-1 inline-flex items-center gap-1.5">
-                    <i data-lucide="phone" class="w-4 h-4"></i>
-                    (21) 99999-9999
-                </button>
+            <div class="space-y-2">
+                <p class="text-xs uppercase tracking-widest text-terracotta-light font-bold">Atendimento & Entregas</p>
+                <p class="text-xs text-cream/75">Todos os dias: 06h30 às 20h00</p>
+                <p class="text-xs text-cream/75">Entregas em Niterói, São Gonçalo e Rio de Janeiro</p>
+                <div class="pt-2">
+                    <button onclick="abrirWhatsApp('Olá! Gostaria de falar com o atendimento da Manhã com Afeto.')" 
+                        class="inline-flex items-center gap-2 bg-whatsapp/15 hover:bg-whatsapp/25 text-whatsapp border border-whatsapp/30 px-4 py-2 rounded-xl text-xs font-bold transition">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>WhatsApp: (21) 99999-9999</span>
+                    </button>
+                </div>
             </div>
 
-            <div class="text-xs text-cream/50 md:text-right space-y-1">
-                <p>© 2026 Manhã com Afeto – Todos os direitos reservados.</p>
-                <p>CNPJ: 00.000.000/0001-00</p>
+            <div class="space-y-2 md:text-right text-xs text-cream/55">
+                <p class="text-cream/80 font-semibold">Pagamentos Aceitos</p>
+                <p>Pix • Cartão de Crédito em até 3x • Faturamento Corporativo (NF-e)</p>
+                <p class="pt-4">© 2026 Manhã com Afeto Cestas Artesanais.</p>
             </div>
         </div>
     </footer>
 
+    <!-- MODAL INTERATIVO: MONTADOR DE CESTA PERSONALIZADA -->
+    <div id="modalPersonalizar" class="fixed inset-0 z-50 hidden bg-espresso-dark/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-cream border border-taupe rounded-3xl max-w-lg w-full p-6 md:p-8 shadow-2xl space-y-5 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="fecharModalPersonalizar()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-sand hover:bg-taupe flex items-center justify-center text-espresso-dark">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-terracotta">Simulador Rápido</span>
+                <h3 class="font-serif text-2xl md:text-3xl font-bold text-espresso-dark">Personalize seu Presente</h3>
+                <p class="text-xs text-espresso/75 mt-1">Escolha a base e marque os mimos extras. O orçamento vai direto para o WhatsApp!</p>
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-espresso/80 mb-1.5">1. Escolha a Cesta Base:</label>
+                    <select id="selectBase" onchange="calcularTotalModal()" class="w-full bg-white border border-taupe rounded-xl px-4 py-3 text-sm font-semibold text-espresso-dark focus:outline-none focus:border-terracotta">
+                        <option value="168" data-nome="Box Delicatesse">Box Delicatesse (R$ 168,00)</option>
+                        <option value="239" data-nome="Cesta Bonjour Pinus">Cesta Bonjour Pinus (R$ 239,00)</option>
+                        <option value="289" data-nome="Cesta Manhã com Afeto" selected>Cesta Manhã com Afeto - Mais Vendida (R$ 289,00)</option>
+                        <option value="329" data-nome="Bandeja Étoile du Matin">Bandeja Étoile du Matin com Brie (R$ 329,00)</option>
+                        <option value="369" data-nome="Box Celebração & Balão">Box Celebração & Balão (R$ 369,00)</option>
+                        <option value="489" data-nome="Baú Imperial Brunch (Casal)">Baú Imperial Brunch - 2 Pessoas (R$ 489,00)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-espresso/80 mb-2">2. Adicione Mimos Extras (Opcional):</label>
+                    <div class="space-y-2 text-sm">
+                        <label class="flex items-center justify-between bg-white p-3 rounded-xl border border-taupe/70 cursor-pointer hover:border-terracotta">
+                            <span class="flex items-center gap-2.5">
+                                <input type="checkbox" class="extra-item accent-terracotta w-4 h-4" value="45" data-extra="Balão Bubble Personalizado com Frase" onchange="calcularTotalModal()">
+                                <span>🎈 Balão Bubble Personalizado com Nome</span>
+                            </span>
+                            <span class="font-bold text-terracotta text-xs">+ R$ 45</span>
+                        </label>
+                        <label class="flex items-center justify-between bg-white p-3 rounded-xl border border-taupe/70 cursor-pointer hover:border-terracotta">
+                            <span class="flex items-center gap-2.5">
+                                <input type="checkbox" class="extra-item accent-terracotta w-4 h-4" value="38" data-extra="Caneca de Porcelana Personalizada" onchange="calcularTotalModal()">
+                                <span>☕ Caneca de Porcelana com Nome</span>
+                            </span>
+                            <span class="font-bold text-terracotta text-xs">+ R$ 38</span>
+                        </label>
+                        <label class="flex items-center justify-between bg-white p-3 rounded-xl border border-taupe/70 cursor-pointer hover:border-terracotta">
+                            <span class="flex items-center gap-2.5">
+                                <input type="checkbox" class="extra-item accent-terracotta w-4 h-4" value="18" data-extra="Kit 3 Fotos Polaroid Extras" onchange="calcularTotalModal()">
+                                <span>📸 Kit +3 Fotos Reveladas em Polaroid</span>
+                            </span>
+                            <span class="font-bold text-terracotta text-xs">+ R$ 18</span>
+                        </label>
+                        <label class="flex items-center justify-between bg-white p-3 rounded-xl border border-taupe/70 cursor-pointer hover:border-terracotta">
+                            <span class="flex items-center gap-2.5">
+                                <input type="checkbox" class="extra-item accent-terracotta w-4 h-4" value="65" data-extra="Mini Orquídea Plantada" onchange="calcularTotalModal()">
+                                <span>🌸 Mini Orquídea Branca/Pink Plantada</span>
+                            </span>
+                            <span class="font-bold text-terracotta text-xs">+ R$ 65</span>
+                        </label>
+                        <label class="flex items-center justify-between bg-white p-3 rounded-xl border border-taupe/70 cursor-pointer hover:border-terracotta">
+                            <span class="flex items-center gap-2.5">
+                                <input type="checkbox" class="extra-item accent-terracotta w-4 h-4" value="79" data-extra="Espumante Baby Chandon Brut 187ml" onchange="calcularTotalModal()">
+                                <span>🥂 Baby Chandon Brut (187ml)</span>
+                            </span>
+                            <span class="font-bold text-terracotta text-xs">+ R$ 79</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-espresso/80 mb-1.5">3. Nome do Presenteado / Ocasião (Opcional):</label>
+                    <input type="text" id="inputOcasiao" placeholder="Ex: Para Maria (Aniversário) - Entrega às 08h" class="w-full bg-white border border-taupe rounded-xl px-4 py-2.5 text-sm text-espresso-dark focus:outline-none focus:border-terracotta">
+                </div>
+            </div>
+
+            <div class="bg-sand p-4 rounded-2xl flex items-center justify-between border border-taupe">
+                <div>
+                    <span class="text-xs text-espresso/70 block">Valor Estimado da Cesta:</span>
+                    <strong id="valorTotalModal" class="text-2xl font-extrabold text-terracotta">R$ 289,00</strong>
+                </div>
+                <button onclick="enviarSimulacaoWhatsApp()" class="bg-whatsapp hover:bg-whatsappDark text-white font-bold px-5 py-3.5 rounded-xl text-sm flex items-center gap-2 shadow-md transition">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>Enviar Pedido</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
     <button onclick="abrirWhatsApp('Olá! Vim pelo site e gostaria de ajuda para escolher uma Cesta de Café da Manhã.')"
         aria-label="Falar no WhatsApp"
-        class="fixed bottom-5 right-5 z-50 bg-whatsapp hover:bg-whatsappDark text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110 flex items-center gap-2 group">
+        class="fixed bottom-5 right-5 z-40 bg-whatsapp hover:bg-whatsappDark text-white p-4 rounded-full shadow-2xl transition transform hover:scale-105 flex items-center gap-2 group">
         <i data-lucide="message-circle" class="w-7 h-7"></i>
         <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 text-sm font-bold whitespace-nowrap">
-            Atendimento Rápido
+            Chamar no WhatsApp
         </span>
     </button>
 
     <!-- SCRIPTS DE INTERAÇÃO -->
     <script>
-        // Inicializa os ícones Lucide
         lucide.createIcons();
 
-        // CONFIGURE SEU NÚMERO DE WHATSAPP AQUI (Apenas números, com DDI 55 + DDD)
+        // SUBSTITUA PELO SEU NÚMERO REAL COM DDD
         const TELEFONE_WHATSAPP = "5521999999999";
 
         function abrirWhatsApp(mensagem) {
@@ -634,6 +1010,52 @@
         function pedirProduto(nomeProduto, precoProduto) {
             const mensagem = `Olá! Vim pelo site e me interessei pelo modelo *${nomeProduto}* (${precoProduto}). Gostaria de personalizar e consultar a disponibilidade de entrega!`;
             abrirWhatsApp(mensagem);
+        }
+
+        function abrirModalPersonalizar() {
+            document.getElementById('modalPersonalizar').classList.remove('hidden');
+            calcularTotalModal();
+        }
+
+        function fecharModalPersonalizar() {
+            document.getElementById('modalPersonalizar').classList.add('hidden');
+        }
+
+        function calcularTotalModal() {
+            const selectBase = document.getElementById('selectBase');
+            let total = parseFloat(selectBase.value);
+            const extras = document.querySelectorAll('.extra-item:checked');
+            extras.forEach(item => {
+                total += parseFloat(item.value);
+            });
+            document.getElementById('valorTotalModal').textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+        }
+
+        function enviarSimulacaoWhatsApp() {
+            const selectBase = document.getElementById('selectBase');
+            const nomeBase = selectBase.options[selectBase.selectedIndex].getAttribute('data-nome');
+            const extrasSelecionados = [];
+            document.querySelectorAll('.extra-item:checked').forEach(item => {
+                extrasSelecionados.push(item.getAttribute('data-extra'));
+            });
+            const ocasiao = document.getElementById('inputOcasiao').value.trim();
+            const totalTexto = document.getElementById('valorTotalModal').textContent;
+
+            let msg = `Olá! Montei uma cesta personalizada pelo simulador do site:\n\n`;
+            msg += `🧺 *Cesta Base:* ${nomeBase}\n`;
+            if (extrasSelecionados.length > 0) {
+                msg += `✨ *Adicionais:* ${extrasSelecionados.join(', ')}\n`;
+            } else {
+                msg += `✨ *Adicionais:* Sem adicionais extras\n`;
+            }
+            if (ocasiao) {
+                msg += `💌 *Detalhes/Ocasião:* ${ocasiao}\n`;
+            }
+            msg += `💰 *Total Estimado:* ${totalTexto}\n\n`;
+            msg += `Gostaria de confirmar a disponibilidade de entrega!`;
+
+            fecharModalPersonalizar();
+            abrirWhatsApp(msg);
         }
     </script>
 </body>
